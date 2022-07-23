@@ -57,16 +57,40 @@ function check_animation() {
 
 function disableSubmit() {
   document.getElementById("register_account").disabled = true;
- }
+}
 
-  function activateButton(element) {
-
-      if(element.checked) {
-        document.getElementById("register_account").disabled = false;
-       }
-       else  {
-        document.getElementById("register_account").disabled = true;
-      }
-
+function activateButton(element) {
+  if (element.checked) {
+    document.getElementById("register_account").disabled = false;
+  } else {
+    document.getElementById("register_account").disabled = true;
   }
+}
 
+//LOGIN
+
+function validateLoginCellNumber() {
+  var validateLoginCellNumberField =
+    document.forms["login-form"]["cellNumberInput"].value;
+  if (validateLoginCellNumberField == "") {
+    alert("Please enter your cell number");
+    return false;
+  }
+  else 
+  {
+    return true;
+  }
+}
+
+function validateLoginPassword() {
+  var validateLoginPasswordField =
+    document.forms["login-form"]["passwordInput"].value;
+  if (validateLoginPasswordField == "") {
+    alert("Please enter your password");
+    return false;
+  }
+  else 
+  {
+    return true;
+  }
+}
