@@ -25,7 +25,7 @@
   </title>
 </head>
 
-<body>
+<body onload="disableSubmit()">
   <!-- NAVIGATION BAR -->
 
   <div class="navigation-bar">
@@ -137,22 +137,16 @@
 
         <div class="form-group">
           <div class="form-check mt-4">
-            <input type="checkbox" class="form-check-input" id="terms" name="terms">
+            <input type="checkbox" class="form-check-input" name="terms" onchange="activateButton(this)">
             <label class="form-check-label" for="terms">I agree to your <a href="terms-and-conditions.html"
                 target="_blank">Terms and Conditions</a>.</label>
           </div>
         </div>
 
-        <div> <button type="submit" class="btn btn-primary submit-button">
-            Register Account
-          </button></div>
-
+        <div><button class="btn btn-primary submit-button" id="register_account" type="submit" name="register">Register Account</button></div>
       </form>
     </div>
   </div>
-
-
-
 
   <!-- CREDIT FOOTER -->
 
