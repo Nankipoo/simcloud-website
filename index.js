@@ -15,8 +15,6 @@ var clickedColour = $(".nav-link").click(function () {
   $(this).css("color", "gold");
 });
 
-//MAIN IMAGE
-
 //SMALL IMAGES
 
 var defaultColour2 = $(".click-here").css("color", "whitesmoke");
@@ -55,5 +53,20 @@ function check_animation() {
   });
 }
 
-//HOW
+//TERMS
+
+function disableSubmit() {
+  document.getElementById("register_account").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("register_account").disabled = false;
+       }
+       else  {
+        document.getElementById("register_account").disabled = true;
+      }
+
+  }
 
